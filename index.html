@@ -1,159 +1,1980 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio Pebriana Hera Kuswara, S.Kom — IT Support, IT Technician & Network Technician.">
-  <title>Pebriana Hera Kuswara, S.Kom | IT Support & Network Technician</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --navy:#071b35; --navy2:#0d2b52; --blue:#2f80ed; --cyan:#55c7ff;
-      --ink:#172033; --muted:#657085; --bg:#f6f9fc; --white:#fff;
-      --line:#e6edf5; --shadow:0 20px 55px rgba(7,27,53,.10);
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Portfolio Pebriana Hera Kuswara, S.Kom - IT Support, IT Technician & Network Technician.">
+
+<title>Pebriana Hera Kuswara | IT Support & Network Technician</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --navy:#06162d;
+    --navy2:#0b2345;
+    --blue:#2f80ed;
+    --cyan:#55c7ff;
+    --purple:#8b5cf6;
+    --green:#55e6a5;
+    --white:#ffffff;
+    --bg:#f5f8fc;
+    --ink:#172033;
+    --muted:#697589;
+    --line:#e5ebf3;
+    --shadow:0 20px 60px rgba(7,27,53,.10);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1150px,92%);
+    margin:auto;
+}
+
+/* =========================
+   SCROLL BAR
+========================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#071b35;
+}
+
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(var(--blue),var(--cyan));
+    border-radius:20px;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:100;
+    background:rgba(6,22,45,.72);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+nav.scrolled{
+    background:rgba(6,22,45,.95);
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.navin{
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.brand{
+    font-family:"Plus Jakarta Sans";
+    font-weight:800;
+    color:#fff;
+    font-size:19px;
+}
+
+.brand span{
+    color:var(--cyan);
+}
+
+.navlinks{
+    display:flex;
+    gap:28px;
+    color:#d8e4f2;
+    font-size:13px;
+    font-weight:600;
+}
+
+.navlinks a{
+    position:relative;
+    transition:.3s;
+}
+
+.navlinks a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:2px;
+    background:var(--cyan);
+    transition:.3s;
+}
+
+.navlinks a:hover{
+    color:#fff;
+}
+
+.navlinks a:hover::after{
+    width:100%;
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    color:white;
+    font-size:26px;
+    cursor:pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:130px 0 90px;
+    position:relative;
+    overflow:hidden;
+    color:#fff;
+    background:
+        radial-gradient(circle at 80% 20%,rgba(85,199,255,.18),transparent 25%),
+        radial-gradient(circle at 15% 20%,rgba(47,128,237,.18),transparent 30%),
+        linear-gradient(135deg,#06162d,#0a2444 60%,#10365f);
+}
+
+/* animated glow */
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(47,128,237,.15);
+    filter:blur(80px);
+    top:-150px;
+    right:-100px;
+    animation:floatGlow 8s ease-in-out infinite;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:rgba(85,199,255,.10);
+    filter:blur(70px);
+    bottom:-150px;
+    left:-100px;
+    animation:floatGlow 10s ease-in-out infinite reverse;
+}
+
+@keyframes floatGlow{
+    0%,100%{
+        transform:translate(0,0) scale(1);
     }
-    *{box-sizing:border-box;scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1120px,92%);margin:auto}
-    nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(7,27,53,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
-    .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
-    .brand{font-family:"Plus Jakarta Sans";font-weight:800;color:#fff;font-size:18px}
-    .brand span{color:var(--cyan)}
-    .navlinks{display:flex;gap:26px;color:#d8e4f2;font-size:13px;font-weight:600}
-    .navlinks a:hover{color:#fff}
-    .hero{padding:145px 0 80px;background:
-      radial-gradient(circle at 78% 22%,rgba(85,199,255,.20),transparent 25%),
-      radial-gradient(circle at 15% 10%,rgba(47,128,237,.20),transparent 28%),
-      linear-gradient(135deg,var(--navy),#0a2444 62%,#10365f);color:#fff;overflow:hidden}
-    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
-    .eyebrow{display:inline-flex;gap:9px;align-items:center;padding:7px 12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.07);border-radius:999px;color:#cde9ff;font-size:12px;font-weight:700}
-    .dot{width:8px;height:8px;border-radius:50%;background:#55e6a5;box-shadow:0 0 0 5px rgba(85,230,165,.12)}
-    h1{font-family:"Plus Jakarta Sans";font-size:clamp(42px,6vw,72px);line-height:1.02;margin:20px 0 18px;letter-spacing:-3px}
-    h1 em{font-style:normal;color:var(--cyan)}
-    .hero p{max-width:680px;color:#cbd9e9;font-size:17px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .btn{padding:13px 19px;border-radius:12px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;gap:8px;transition:.2s}
-    .btn-primary{background:#fff;color:var(--navy)} .btn-primary:hover{transform:translateY(-2px)}
-    .btn-ghost{border:1px solid rgba(255,255,255,.2);color:#fff;background:rgba(255,255,255,.06)}
-    .hero-photo{position:relative;display:flex;justify-content:center}
-    .photo-ring{width:min(360px,78vw);aspect-ratio:1;border-radius:50%;padding:9px;background:linear-gradient(145deg,#55c7ff,#2f80ed,#fff);box-shadow:0 25px 70px rgba(0,0,0,.28)}
-    .photo-ring img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:50%;border:7px solid var(--navy)}
-    .badge{position:absolute;bottom:25px;left:8px;background:#fff;color:var(--navy);padding:13px 16px;border-radius:16px;box-shadow:var(--shadow);font-size:12px;font-weight:800}
-    section{padding:82px 0}
-    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}
-    .kicker{color:var(--blue);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
-    h2{font-family:"Plus Jakarta Sans";font-size:34px;line-height:1.15;margin:7px 0 0;letter-spacing:-1px}
-    .lead{color:var(--muted);max-width:600px;margin:0}
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-    .card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:28px;box-shadow:0 10px 35px rgba(7,27,53,.05)}
-    .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
-    .fact{padding:15px;background:var(--bg);border-radius:13px}.fact small{display:block;color:var(--muted);font-size:11px}.fact strong{font-size:14px}
-    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .skill{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
-    .skill h3{margin:0 0 7px;font-size:15px}.skill p{margin:0;color:var(--muted);font-size:13px}
-    .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:13px}.tag{font-size:11px;font-weight:700;padding:6px 9px;background:#eef6ff;color:#245d9e;border-radius:8px}
-    .timeline{position:relative;margin-left:9px;padding-left:29px;border-left:2px solid #dce8f5}
-    .job{position:relative;margin-bottom:32px}.job:before{content:"";position:absolute;left:-39px;top:4px;width:15px;height:15px;border-radius:50%;background:#fff;border:4px solid var(--blue)}
-    .jobtop{display:flex;justify-content:space-between;gap:15px;align-items:start}.job h3{margin:0;font-size:17px}.job .date{font-size:12px;color:var(--blue);font-weight:800;white-space:nowrap}
-    .role{font-size:12px;color:var(--muted);font-weight:600}.job ul{margin:10px 0 0;padding-left:18px;color:#4e596b;font-size:13px}
-    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{background:linear-gradient(145deg,#fff,#f5f9fd);border:1px solid var(--line);border-radius:20px;padding:25px;min-height:220px}
-    .icon{width:45px;height:45px;display:grid;place-items:center;border-radius:13px;background:var(--navy);color:#fff;font-size:20px;margin-bottom:18px}
-    .project h3{margin:0 0 8px;font-size:16px}.project p{font-size:13px;color:var(--muted)}
-    .edu{display:grid;grid-template-columns:1fr 1fr;gap:18px}.edu .card{position:relative;overflow:hidden}.edu .card:after{content:"";position:absolute;right:-35px;top:-35px;width:110px;height:110px;border-radius:50%;background:#e9f4ff}
-    .cert{display:flex;gap:10px;flex-wrap:wrap}.cert span{padding:10px 13px;background:#fff;border:1px solid var(--line);border-radius:11px;font-size:12px;font-weight:700}
-    .contact{background:linear-gradient(135deg,var(--navy),#10365f);color:#fff}.contact .lead{color:#cbd9e9}
-    .contactbox{display:flex;justify-content:space-between;gap:30px;align-items:center}.contactlinks{display:flex;gap:10px;flex-wrap:wrap}
-    footer{background:#06162b;color:#91a5bc;padding:22px 0;font-size:12px}.footerin{display:flex;justify-content:space-between;gap:20px}
-    @media(max-width:820px){
-      .navlinks{display:none}.hero-grid,.about,.edu{grid-template-columns:1fr}.hero-photo{order:-1}.hero{padding-top:115px}.projects{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.contactbox{display:block}.contactlinks{margin-top:22px}
+    50%{
+        transform:translate(30px,30px) scale(1.15);
     }
-  </style>
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:60px;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:8px 14px;
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.07);
+    backdrop-filter:blur(10px);
+    border-radius:999px;
+    color:#cde9ff;
+    font-size:12px;
+    font-weight:700;
+    animation:fadeDown .8s ease;
+}
+
+.dot{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:var(--green);
+    box-shadow:0 0 0 6px rgba(85,230,165,.12);
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%,100%{
+        box-shadow:0 0 0 5px rgba(85,230,165,.10);
+    }
+    50%{
+        box-shadow:0 0 0 10px rgba(85,230,165,.02);
+    }
+}
+
+h1{
+    font-family:"Plus Jakarta Sans";
+    font-size:clamp(42px,6vw,72px);
+    line-height:1.03;
+    margin:22px 0;
+    letter-spacing:-3px;
+    animation:fadeUp 1s ease .1s both;
+}
+
+h1 em{
+    font-style:normal;
+    background:linear-gradient(90deg,#55c7ff,#8bdbff,#55c7ff);
+    background-size:200%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove{
+    to{
+        background-position:200%;
+    }
+}
+
+.hero p{
+    max-width:680px;
+    color:#cbd9e9;
+    font-size:17px;
+    animation:fadeUp 1s ease .25s both;
+}
+
+.hero-actions{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:30px;
+    animation:fadeUp 1s ease .4s both;
+}
+
+.btn{
+    padding:14px 20px;
+    border-radius:12px;
+    font-weight:700;
+    font-size:13px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:#fff;
+    color:var(--navy);
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+.btn-ghost{
+    border:1px solid rgba(255,255,255,.2);
+    color:#fff;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(10px);
+}
+
+.btn-ghost:hover{
+    transform:translateY(-4px);
+    background:rgba(255,255,255,.12);
+}
+
+/* PHOTO */
+
+.hero-photo{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    animation:photoIn 1.2s ease .2s both;
+}
+
+.photo-ring{
+    width:min(370px,78vw);
+    aspect-ratio:1;
+    border-radius:50%;
+    padding:8px;
+    background:linear-gradient(
+        145deg,
+        #55c7ff,
+        #2f80ed,
+        #8b5cf6,
+        #fff
+    );
+    background-size:300% 300%;
+    animation:borderFlow 6s ease infinite;
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.35),
+        0 0 80px rgba(47,128,237,.18);
+}
+
+@keyframes borderFlow{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.photo-ring img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:50%;
+    border:8px solid var(--navy);
+    background:#ddd;
+}
+
+.badge{
+    position:absolute;
+    bottom:20px;
+    left:5px;
+    background:rgba(255,255,255,.95);
+    color:var(--navy);
+    padding:13px 17px;
+    border-radius:16px;
+    box-shadow:var(--shadow);
+    font-size:12px;
+    font-weight:800;
+    animation:floatBadge 4s ease-in-out infinite;
+}
+
+@keyframes floatBadge{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:90px 0;
+}
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:end;
+    margin-bottom:40px;
+}
+
+.kicker{
+    color:var(--blue);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1.7px;
+    text-transform:uppercase;
+}
+
+h2{
+    font-family:"Plus Jakarta Sans";
+    font-size:36px;
+    line-height:1.15;
+    margin:8px 0 0;
+    letter-spacing:-1px;
+}
+
+.lead{
+    color:var(--muted);
+    max-width:600px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:30px;
+    box-shadow:0 10px 35px rgba(7,27,53,.05);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 25px 55px rgba(7,27,53,.11);
+    border-color:#d3e4f8;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.about-text p{
+    margin-bottom:15px;
+}
+
+.facts{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
+.fact{
+    padding:17px;
+    background:var(--bg);
+    border-radius:14px;
+    transition:.3s;
+}
+
+.fact:hover{
+    transform:scale(1.03);
+    background:#eef6ff;
+}
+
+.fact small{
+    display:block;
+    color:var(--muted);
+    font-size:11px;
+    margin-bottom:3px;
+}
+
+.fact strong{
+    font-size:14px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.skill{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:25px;
+    transition:.35s;
+    position:relative;
+    overflow:hidden;
+}
+
+.skill::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:3px;
+    background:linear-gradient(90deg,var(--blue),var(--cyan));
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:.4s;
+}
+
+.skill:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
+}
+
+.skill:hover::before{
+    transform:scaleX(1);
+}
+
+.skill h3{
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+.skill p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.tags{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+    margin-top:15px;
+}
+
+.tag{
+    font-size:11px;
+    font-weight:700;
+    padding:6px 10px;
+    background:#eef6ff;
+    color:#245d9e;
+    border-radius:8px;
+}
+
+/* =========================
+   SKILL BAR
+========================= */
+
+.skillbar{
+    margin-top:18px;
+}
+
+.skillbar-top{
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    font-weight:700;
+    margin-bottom:7px;
+}
+
+.progress{
+    height:7px;
+    border-radius:20px;
+    background:#eaf0f6;
+    overflow:hidden;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    width:0;
+    border-radius:20px;
+    background:linear-gradient(90deg,var(--blue),var(--cyan));
+    transition:width 1.5s ease;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    position:relative;
+    margin-left:10px;
+    padding-left:30px;
+    border-left:2px solid #dce8f5;
+}
+
+.job{
+    position:relative;
+    margin-bottom:38px;
+    padding:25px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:18px;
+    transition:.35s;
+}
+
+.job:hover{
+    transform:translateX(8px);
+    box-shadow:var(--shadow);
+}
+
+.job::before{
+    content:"";
+    position:absolute;
+    left:-39px;
+    top:26px;
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#fff;
+    border:4px solid var(--blue);
+    box-shadow:0 0 0 6px var(--bg);
+}
+
+.jobtop{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    align-items:start;
+}
+
+.job h3{
+    margin:0;
+    font-size:17px;
+}
+
+.job .date{
+    font-size:12px;
+    color:var(--blue);
+    font-weight:800;
+    white-space:nowrap;
+}
+
+.role{
+    font-size:12px;
+    color:var(--muted);
+    font-weight:600;
+}
+
+.job ul{
+    margin:12px 0 0;
+    padding-left:18px;
+    color:#4e596b;
+    font-size:13px;
+}
+
+.job li{
+    margin-bottom:5px;
+}
+
+/* =========================
+   PROJECT
+========================= */
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.project{
+    background:linear-gradient(145deg,#fff,#f5f9fd);
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:27px;
+    min-height:240px;
+    transition:.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.project::after{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:rgba(47,128,237,.07);
+    right:-40px;
+    bottom:-40px;
+    transition:.4s;
+}
+
+.project:hover{
+    transform:translateY(-10px);
+    box-shadow:var(--shadow);
+}
+
+.project:hover::after{
+    transform:scale(2);
+}
+
+.icon{
+    width:48px;
+    height:48px;
+    display:grid;
+    place-items:center;
+    border-radius:14px;
+    background:linear-gradient(135deg,var(--navy),var(--blue));
+    color:#fff;
+    font-size:20px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(47,128,237,.2);
+}
+
+.project h3{
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+.project p{
+    font-size:13px;
+    color:var(--muted);
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.edu{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.edu .card{
+    position:relative;
+    overflow:hidden;
+}
+
+.edu .card::after{
+    content:"";
+    position:absolute;
+    right:-40px;
+    top:-40px;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background:#e9f4ff;
+    transition:.4s;
+}
+
+.edu .card:hover::after{
+    transform:scale(1.4);
+}
+
+.cert{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.cert span{
+    padding:10px 14px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:11px;
+    font-size:12px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.cert span:hover{
+    transform:translateY(-4px);
+    background:#eef6ff;
+    border-color:#cfe4fa;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:
+        radial-gradient(circle at 80% 20%,rgba(85,199,255,.12),transparent 30%),
+        linear-gradient(135deg,var(--navy),#10365f);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+}
+
+.contactbox{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    align-items:center;
+}
+
+.contact .lead{
+    color:#cbd9e9;
+}
+
+.contactlinks{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#06162b;
+    color:#91a5bc;
+    padding:24px 0;
+    font-size:12px;
+}
+
+.footerin{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+.top-btn{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:45px;
+    height:45px;
+    border:0;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--blue),var(--cyan));
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(20px);
+    transition:.3s;
+    z-index:90;
+    box-shadow:0 10px 30px rgba(47,128,237,.3);
+}
+
+.top-btn.show{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.top-btn:hover{
+    transform:translateY(-5px);
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes photoIn{
+    from{
+        opacity:0;
+        transform:scale(.85) translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:820px){
+
+    .navlinks{
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        background:rgba(6,22,45,.97);
+        backdrop-filter:blur(15px);
+        display:flex;
+        flex-direction:column;
+        gap:0;
+        padding:10px 6%;
+        max-height:0;
+        overflow:hidden;
+        transition:.4s;
+    }
+
+    .navlinks.open{
+        max-height:400px;
+    }
+
+    .navlinks a{
+        padding:15px 0;
+        border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero{
+        padding-top:110px;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+        text-align:center;
+    }
+
+    .hero-photo{
+        order:-1;
+    }
+
+    .hero p{
+        margin:auto;
+    }
+
+    .hero-actions{
+        justify-content:center;
+    }
+
+    .badge{
+        left:50%;
+        transform:translateX(-50%);
+        white-space:nowrap;
+    }
+
+    h1{
+        font-size:44px;
+        letter-spacing:-2px;
+    }
+
+    .section-head{
+        display:block;
+    }
+
+    .section-head .lead{
+        margin-top:15px;
+    }
+
+    .about,
+    .edu,
+    .skills{
+        grid-template-columns:1fr;
+    }
+
+    .projects{
+        grid-template-columns:1fr;
+    }
+
+    .contactbox{
+        display:block;
+    }
+
+    .contactlinks{
+        margin-top:25px;
+    }
+
+    .footerin{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .facts{
+        grid-template-columns:1fr;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+    h2{
+        font-size:29px;
+    }
+
+    .photo-ring{
+        width:290px;
+    }
+
+    .jobtop{
+        display:block;
+    }
+
+    .job .date{
+        display:block;
+        margin-top:5px;
+    }
+
+}
+
+</style>
 </head>
+
 <body>
-<nav><div class="container navin">
-  <a class="brand" href="#home">Pebriana<span>.</span></a>
-  <div class="navlinks"><a href="#about">Profil</a><a href="#experience">Pengalaman</a><a href="#skills">Keahlian</a><a href="#projects">Proyek</a><a href="#contact">Kontak</a></div>
-</div></nav>
 
-<header class="hero" id="home"><div class="container hero-grid">
-  <div>
-    <div class="eyebrow"><span class="dot"></span> AVAILABLE FOR IT OPPORTUNITIES</div>
-    <h1>IT Support &<br><em>Network Technician</em></h1>
-    <p>Halo, saya <strong>Pebriana Hera Kuswara, S.Kom</strong>. Profesional IT dengan pengalaman di IT Support, jaringan komputer, fiber optic, troubleshooting perangkat, dan dukungan sistem informasi.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#experience">Lihat Pengalaman →</a>
-      <a class="btn btn-ghost" href="mailto:pebrianaproject23@gmail.com">Hubungi Saya</a>
-    </div>
-  </div>
-  <div class="hero-photo"><div class="photo-ring"><img src="assets/profile.png" alt="Pebriana Hera Kuswara"></div><div class="badge">S.Kom • Teknik Informatika</div></div>
-</div></header>
+<!-- =========================
+     NAVBAR
+========================= -->
 
-<section id="about"><div class="container">
-  <div class="section-head"><div><div class="kicker">Tentang Saya</div><h2>Profesional, teknis, dan problem solver.</h2></div><p class="lead">Terbiasa bekerja di lingkungan operasional yang membutuhkan ketelitian, respons cepat, komunikasi, dan pemecahan masalah.</p></div>
-  <div class="about">
-    <div class="card"><p>Saya memiliki latar belakang <strong>Teknik Informatika</strong> dan <strong>Teknik Komputer Jaringan</strong>, dengan pengalaman kerja sebagai Staff IT di RSUD Jatisari, Staff Data Entry di PT Indah Cargo, dan Teknisi IndiHome.</p><p>Fokus utama saya adalah memastikan perangkat, jaringan, dan sistem dapat berjalan dengan baik. Saya juga memiliki kemampuan dasar HTML, CSS, PHP, dan MySQL untuk mendukung kebutuhan proyek web.</p></div>
-    <div class="card"><div class="facts">
-      <div class="fact"><small>Domisili</small><strong>Karawang</strong></div><div class="fact"><small>Tempat, Tgl. Lahir</small><strong>Bandung, 23 Feb 1995</strong></div>
-      <div class="fact"><small>Pendidikan</small><strong>S1 Teknik Informatika</strong></div><div class="fact"><small>Pengalaman</small><strong>IT • Networking • Data</strong></div>
-    </div></div>
-  </div>
-</div></section>
+<nav id="navbar">
 
-<section id="experience"><div class="container">
-  <div class="section-head"><div><div class="kicker">Karier</div><h2>Pengalaman kerja</h2></div></div>
-  <div class="timeline">
-    <article class="job"><div class="jobtop"><div><h3>RSUD Jatisari</h3><div class="role">Staff IT</div></div><div class="date">2022 — 2026</div></div><ul>
-      <li>Maintenance, monitoring, dan troubleshooting komputer, laptop, printer, serta perangkat IT.</li>
-      <li>Pemeliharaan LAN, Wi-Fi, switch, access point, koneksi internet, server, dan infrastruktur jaringan.</li>
-      <li>Dukungan operasional SIMRS, sistem informasi, integrasi/bridging, backup, dokumentasi, serta koordinasi vendor.</li>
-    </ul></article>
-    <article class="job"><div class="jobtop"><div><h3>PT Indah Cargo</h3><div class="role">Staff Data Entry</div></div><div class="date">2021 — 2022</div></div><ul>
-      <li>Input, verifikasi, pembaruan, rekapitulasi, dan pengarsipan data pengiriman.</li>
-      <li>Menyiapkan laporan serta berkoordinasi dengan bagian operasional dan administrasi.</li>
-    </ul></article>
-    <article class="job"><div class="jobtop"><div><h3>Teknisi IndiHome</h3><div class="role">Teknisi Jaringan & Fiber Optic</div></div><div class="date">2018 — 2019</div></div><ul>
-      <li>Instalasi layanan internet, ONT/ONU, modem, router, Wi-Fi, dan fiber optic.</li>
-      <li>Troubleshooting gangguan jaringan, pengecekan kualitas koneksi, maintenance, edukasi pelanggan, dan pelaporan pekerjaan.</li>
-    </ul></article>
-  </div>
-</div></section>
+<div class="container navin">
 
-<section id="skills"><div class="container">
-  <div class="section-head"><div><div class="kicker">Kompetensi</div><h2>Keahlian utama</h2></div></div>
-  <div class="skills">
-    <div class="skill"><h3>🛠 IT Support & Troubleshooting</h3><p>Menangani hardware, software, Windows, printer, dan maintenance perangkat.</p><div class="tags"><span class="tag">Hardware</span><span class="tag">Software</span><span class="tag">Windows</span><span class="tag">Printer</span></div></div>
-    <div class="skill"><h3>🌐 Networking</h3><p>Instalasi dan troubleshooting LAN/Wi-Fi serta konfigurasi dasar perangkat jaringan.</p><div class="tags"><span class="tag">MikroTik</span><span class="tag">LAN/Wi-Fi</span><span class="tag">Router</span><span class="tag">Switch</span></div></div>
-    <div class="skill"><h3>🔌 Fiber Optic</h3><p>Instalasi FTTH, penarikan kabel, ONT/ONU, terminasi dasar, dan troubleshooting.</p><div class="tags"><span class="tag">FTTH</span><span class="tag">Fiber Optic</span><span class="tag">ONT/ONU</span></div></div>
-    <div class="skill"><h3>💻 Web & Database — Dasar</h3><p>Memahami dasar pengembangan website dan aplikasi web.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">PHP</span><span class="tag">MySQL</span></div></div>
-  </div>
-</div></section>
+<a class="brand" href="#home">
+    Pebriana<span>.</span>
+</a>
 
-<section id="projects"><div class="container">
-  <div class="section-head"><div><div class="kicker">Portfolio</div><h2>Proyek yang pernah dikerjakan</h2></div></div>
-  <div class="projects">
-    <article class="project"><div class="icon">◉</div><h3>Website Landing Page</h3><p>Membuat website landing page untuk kebutuhan informasi dan promosi, termasuk struktur halaman, tampilan, pengujian, dan perbaikan.</p></article>
-    <article class="project"><div class="icon">▣</div><h3>Aplikasi Kasir Berbasis Web</h3><p>Proyek pembelajaran dengan fitur dasar pencatatan transaksi serta pengolahan data dan database.</p></article>
-    <article class="project"><div class="icon">⌁</div><h3>Jaringan Klinik Miracle</h3><p>Pengerjaan instalasi jaringan internet gedung 2 lantai, penarikan kabel, konfigurasi perangkat, pengujian, troubleshooting, dan dokumentasi.</p></article>
-  </div>
-</div></section>
+<div class="navlinks" id="navlinks">
 
-<section><div class="container">
-  <div class="section-head"><div><div class="kicker">Pendidikan</div><h2>Latar belakang akademik</h2></div></div>
-  <div class="edu">
-    <div class="card"><strong>Universitas Bale Bandung</strong><br>S1 Teknik Informatika<br><span style="color:#657085">2013 — 2017</span></div>
-    <div class="card"><strong>SMK Wirakarya 1 Ciparay Bandung</strong><br>Teknik Komputer dan Jaringan<br><span style="color:#657085">2009 — 2012</span></div>
-  </div>
-  <div style="margin-top:25px"><div class="kicker" style="margin-bottom:10px">Sertifikasi & Pelatihan</div><div class="cert"><span>Cyber Security Training</span><span>Internet Safety for Kids</span><span>Front-End / Coding Camp</span><span>Pelatihan Teknologi & Digital</span></div></div>
-</div></section>
+<a href="#about">Profil</a>
+<a href="#experience">Pengalaman</a>
+<a href="#skills">Keahlian</a>
+<a href="#projects">Proyek</a>
+<a href="#education">Pendidikan</a>
+<a href="#contact">Kontak</a>
 
-<section class="contact" id="contact"><div class="container contactbox">
-  <div><div class="kicker" style="color:#55c7ff">Mari Terhubung</div><h2>Siap berkontribusi di tim IT Anda.</h2><p class="lead">Terbuka untuk kesempatan sebagai IT Support, Staff IT, IT Technician, atau Network Technician.</p></div>
-  <div class="contactlinks"><a class="btn btn-primary" href="mailto:pebrianaproject23@gmail.com">Email Saya</a><a class="btn btn-ghost" href="https://github.com/mpeb23" target="_blank" rel="noopener">GitHub ↗</a><a class="btn btn-ghost" href="tel:+6281380637870">WhatsApp</a></div>
-</div></section>
+</div>
 
-<footer><div class="container footerin"><span>© 2026 Pebriana Hera Kuswara, S.Kom</span><span>IT Support • Network Technician</span></div></footer>
+<button class="menu-btn" id="menuBtn">
+    ☰
+</button>
+
+</div>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="eyebrow">
+<span class="dot"></span>
+AVAILABLE FOR IT OPPORTUNITIES
+</div>
+
+<h1>
+IT Support &<br>
+<em>Network Technician</em>
+</h1>
+
+<p>
+Halo, saya <strong>Pebriana Hera Kuswara, S.Kom</strong>.
+Profesional IT dengan pengalaman di bidang
+IT Support, jaringan komputer, fiber optic,
+troubleshooting perangkat, dan dukungan sistem informasi.
+</p>
+
+<div class="hero-actions">
+
+<a class="btn btn-primary" href="#experience">
+Lihat Pengalaman →
+</a>
+
+<a class="btn btn-ghost"
+href="mailto:pebrianaproject23@gmail.com">
+Hubungi Saya
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-photo">
+
+<div class="photo-ring">
+
+<img
+src="assets/profile.png"
+alt="Pebriana Hera Kuswara">
+
+</div>
+
+<div class="badge">
+S.Kom • Teknik Informatika
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="kicker">
+Tentang Saya
+</div>
+
+<h2>
+Profesional, teknis & problem solver.
+</h2>
+
+</div>
+
+<p class="lead">
+Terbiasa bekerja di lingkungan operasional
+yang membutuhkan ketelitian, respons cepat,
+komunikasi, dan pemecahan masalah.
+</p>
+
+</div>
+
+
+<div class="about">
+
+<div class="card about-text reveal">
+
+<p>
+Saya memiliki latar belakang
+<strong>Teknik Informatika</strong> dan
+<strong>Teknik Komputer Jaringan</strong>,
+dengan pengalaman sebagai Staff IT di
+RSUD Jatisari, Staff Data Entry di
+PT Indah Cargo, dan Teknisi IndiHome.
+</p>
+
+<p>
+Fokus utama saya adalah memastikan
+perangkat, jaringan, dan sistem dapat
+berjalan dengan baik.
+</p>
+
+<p>
+Saya juga memiliki kemampuan dasar
+HTML, CSS, PHP, dan MySQL untuk mendukung
+kebutuhan proyek web.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="facts">
+
+<div class="fact">
+<small>Domisili</small>
+<strong>Karawang</strong>
+</div>
+
+<div class="fact">
+<small>Tempat, Tgl. Lahir</small>
+<strong>Bandung, 23 Feb 1995</strong>
+</div>
+
+<div class="fact">
+<small>Pendidikan</small>
+<strong>S1 Teknik Informatika</strong>
+</div>
+
+<div class="fact">
+<small>Fokus</small>
+<strong>IT • Networking • Data</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="kicker">
+Karier
+</div>
+
+<h2>
+Pengalaman Kerja
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="timeline">
+
+
+<article class="job reveal">
+
+<div class="jobtop">
+
+<div>
+
+<h3>RSUD Jatisari</h3>
+
+<div class="role">
+Staff IT
+</div>
+
+</div>
+
+<div class="date">
+2022 — 2026
+</div>
+
+</div>
+
+<ul>
+
+<li>
+Maintenance, monitoring, dan troubleshooting
+komputer, laptop, printer, serta perangkat IT.
+</li>
+
+<li>
+Pemeliharaan LAN, Wi-Fi, switch, access point,
+koneksi internet, server, dan infrastruktur jaringan.
+</li>
+
+<li>
+Dukungan operasional sistem informasi,
+backup, dokumentasi, dan koordinasi vendor.
+</li>
+
+</ul>
+
+</article>
+
+
+<article class="job reveal">
+
+<div class="jobtop">
+
+<div>
+
+<h3>PT Indah Cargo</h3>
+
+<div class="role">
+Staff Data Entry
+</div>
+
+</div>
+
+<div class="date">
+2021 — 2022
+</div>
+
+</div>
+
+<ul>
+
+<li>
+Input, verifikasi, pembaruan, rekapitulasi,
+dan pengarsipan data pengiriman.
+</li>
+
+<li>
+Menyiapkan laporan serta berkoordinasi
+dengan bagian operasional dan administrasi.
+</li>
+
+</ul>
+
+</article>
+
+
+<article class="job reveal">
+
+<div class="jobtop">
+
+<div>
+
+<h3>Teknisi IndiHome</h3>
+
+<div class="role">
+Teknisi Jaringan & Fiber Optic
+</div>
+
+</div>
+
+<div class="date">
+2018 — 2019
+</div>
+
+</div>
+
+<ul>
+
+<li>
+Instalasi layanan internet, ONT/ONU,
+modem, router, Wi-Fi, dan fiber optic.
+</li>
+
+<li>
+Troubleshooting gangguan jaringan,
+pengecekan kualitas koneksi,
+maintenance, dan edukasi pelanggan.
+</li>
+
+</ul>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="kicker">
+Kompetensi
+</div>
+
+<h2>
+Keahlian Utama
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="skills">
+
+
+<div class="skill reveal">
+
+<h3>🛠 IT Support & Troubleshooting</h3>
+
+<p>
+Menangani hardware, software, Windows,
+printer, dan maintenance perangkat.
+</p>
+
+<div class="tags">
+<span class="tag">Hardware</span>
+<span class="tag">Software</span>
+<span class="tag">Windows</span>
+<span class="tag">Printer</span>
+</div>
+
+<div class="skillbar">
+
+<div class="skillbar-top">
+<span>Kompetensi</span>
+<span>90%</span>
+</div>
+
+<div class="progress">
+<span data-width="90%"></span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill reveal">
+
+<h3>🌐 Networking</h3>
+
+<p>
+Instalasi dan troubleshooting LAN/Wi-Fi
+serta konfigurasi dasar perangkat jaringan.
+</p>
+
+<div class="tags">
+<span class="tag">MikroTik</span>
+<span class="tag">LAN/Wi-Fi</span>
+<span class="tag">Router</span>
+<span class="tag">Switch</span>
+</div>
+
+<div class="skillbar">
+
+<div class="skillbar-top">
+<span>Kompetensi</span>
+<span>85%</span>
+</div>
+
+<div class="progress">
+<span data-width="85%"></span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill reveal">
+
+<h3>🔌 Fiber Optic</h3>
+
+<p>
+Instalasi FTTH, penarikan kabel,
+ONT/ONU, terminasi dasar, dan troubleshooting.
+</p>
+
+<div class="tags">
+<span class="tag">FTTH</span>
+<span class="tag">Fiber Optic</span>
+<span class="tag">ONT/ONU</span>
+</div>
+
+<div class="skillbar">
+
+<div class="skillbar-top">
+<span>Kompetensi</span>
+<span>88%</span>
+</div>
+
+<div class="progress">
+<span data-width="88%"></span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="skill reveal">
+
+<h3>💻 Web & Database — Dasar</h3>
+
+<p>
+Memahami dasar pengembangan website
+dan aplikasi web.
+</p>
+
+<div class="tags">
+<span class="tag">HTML</span>
+<span class="tag">CSS</span>
+<span class="tag">PHP</span>
+<span class="tag">MySQL</span>
+</div>
+
+<div class="skillbar">
+
+<div class="skillbar-top">
+<span>Kompetensi</span>
+<span>55%</span>
+</div>
+
+<div class="progress">
+<span data-width="55%"></span>
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROJECT
+========================= -->
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="kicker">
+Portfolio
+</div>
+
+<h2>
+Proyek yang Pernah Dikerjakan
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="projects">
+
+
+<article class="project reveal">
+
+<div class="icon">
+◉
+</div>
+
+<h3>
+Website Landing Page
+</h3>
+
+<p>
+Membuat website landing page untuk kebutuhan
+informasi dan promosi, termasuk struktur halaman,
+tampilan, pengujian, dan perbaikan.
+</p>
+
+</article>
+
+
+<article class="project reveal">
+
+<div class="icon">
+▣
+</div>
+
+<h3>
+Aplikasi Kasir Berbasis Web
+</h3>
+
+<p>
+Proyek pembelajaran dengan fitur dasar
+pencatatan transaksi, pengolahan data,
+serta database.
+</p>
+
+</article>
+
+
+<article class="project reveal">
+
+<div class="icon">
+⌁
+</div>
+
+<h3>
+Jaringan Klinik Miracle
+</h3>
+
+<p>
+Instalasi jaringan internet gedung 2 lantai,
+penarikan kabel, konfigurasi perangkat,
+pengujian, troubleshooting, dan dokumentasi.
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education">
+
+<div class="container">
+
+<div class="section-head reveal">
+
+<div>
+
+<div class="kicker">
+Pendidikan
+</div>
+
+<h2>
+Latar Belakang Akademik
+</h2>
+
+</div>
+
+</div>
+
+
+<div class="edu">
+
+
+<div class="card reveal">
+
+<strong>
+Universitas Bale Bandung
+</strong>
+
+<br>
+
+S1 Teknik Informatika
+
+<br>
+
+<span style="color:#657085">
+2013 — 2017
+</span>
+
+</div>
+
+
+<div class="card reveal">
+
+<strong>
+SMK Wirakarya 1 Ciparay Bandung
+</strong>
+
+<br>
+
+Teknik Komputer dan Jaringan
+
+<br>
+
+<span style="color:#657085">
+2009 — 2012
+</span>
+
+</div>
+
+
+</div>
+
+
+<div style="margin-top:35px" class="reveal">
+
+<div class="kicker" style="margin-bottom:12px">
+Sertifikasi & Pelatihan
+</div>
+
+<div class="cert">
+
+<span>
+Cyber Security Training
+</span>
+
+<span>
+Internet Safety for Kids
+</span>
+
+<span>
+Front-End / Coding Camp
+</span>
+
+<span>
+Pelatihan Teknologi & Digital
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="container contactbox reveal">
+
+<div>
+
+<div class="kicker" style="color:#55c7ff">
+Mari Terhubung
+</div>
+
+<h2>
+Siap Berkontribusi di Tim IT Anda.
+</h2>
+
+<p class="lead">
+Terbuka untuk kesempatan sebagai IT Support,
+Staff IT, IT Technician, atau Network Technician.
+</p>
+
+</div>
+
+
+<div class="contactlinks">
+
+<a
+class="btn btn-primary"
+href="mailto:pebrianaproject23@gmail.com">
+Email Saya
+</a>
+
+
+<a
+class="btn btn-ghost"
+href="https://github.com/mpeb23"
+target="_blank"
+rel="noopener">
+GitHub ↗
+</a>
+
+
+<a
+class="btn btn-ghost"
+href="https://wa.me/6281380637870"
+target="_blank">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container footerin">
+
+<span>
+© 2026 Pebriana Hera Kuswara, S.Kom
+</span>
+
+<span>
+IT Support • Network Technician
+</span>
+
+</div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button class="top-btn" id="topBtn">
+↑
+</button>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navlinks = document.getElementById("navlinks");
+
+menuBtn.addEventListener("click", () => {
+
+    navlinks.classList.toggle("open");
+
+    menuBtn.textContent =
+        navlinks.classList.contains("open")
+        ? "✕"
+        : "☰";
+
+});
+
+document.querySelectorAll(".navlinks a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navlinks.classList.remove("open");
+        menuBtn.textContent = "☰";
+
+    });
+
+});
+
+
+/* =========================
+   NAVBAR SCROLL
+========================= */
+
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 50){
+        navbar.classList.add("scrolled");
+    }else{
+        navbar.classList.remove("scrolled");
+    }
+
+});
+
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("active");
+
+        }
+
+    });
+
+},{
+    threshold:.12
+});
+
+revealElements.forEach(el => {
+    observer.observe(el);
+});
+
+
+/* =========================
+   SKILL PROGRESS
+========================= */
+
+const progressBars =
+document.querySelectorAll(".progress span");
+
+const progressObserver =
+new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            const width =
+                entry.target.getAttribute("data-width");
+
+            entry.target.style.width = width;
+
+        }
+
+    });
+
+},{
+    threshold:.5
+});
+
+progressBars.forEach(bar => {
+    progressObserver.observe(bar);
+});
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const topBtn =
+document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 500){
+
+        topBtn.classList.add("show");
+
+    }else{
+
+        topBtn.classList.remove("show");
+
+    }
+
+});
+
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
+
+
+</script>
+
 </body>
 </html>
